@@ -147,6 +147,10 @@ public class NicoAudioSourceManager implements AudioSourceManager, HttpConfigura
         return httpInterfaceManager.getInterface();
     }
 
+    HttpInterfaceManager getHttpInterfaceManager() {
+        return httpInterfaceManager;
+    }
+
     @Override
     public void configureRequests(Function<RequestConfig, RequestConfig> configurator) {
         httpInterfaceManager.configureRequests(configurator);
